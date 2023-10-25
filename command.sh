@@ -36,7 +36,7 @@ sleep 5
 clear
 
 for device in $devices; do
-    $command > /dev/null 2>&1
+    ssh $USER@$device $command > /dev/null 2>&1
 
     if [ $? -eq 0 ]; then
         printf "$device [%sSUCCESS%s]\n" "${CGR}" "${CNC}"
