@@ -31,6 +31,12 @@ for octeto in [10..150]; do
 done
 
 logo "rxfatalslash"
+
+if [ "$(whoami)" != "root" ]; then
+    printf "%s%s[ERROR] Ejecuta el sccript como root%s\n\n" "${BLD}" "${CRE}" "${CNC}"
+    exit 1
+fi
+
 printf "%s%sConectando con los equipos...%s" "${BLD}" "${CRE}" "${CNC}"
 sleep 5
 clear
