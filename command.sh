@@ -37,7 +37,7 @@ if [ "$(whoami)" != "root" ]; then
     exit 1
 fi
 
-printf "%s%sConectando con los equipos...%s" "${BLD}" "${CRE}" "${CNC}"
+printf "%s%s[+] Conectando con los equipos...%s" "${BLD}" "${CRE}" "${CNC}"
 sleep 5
 clear
 
